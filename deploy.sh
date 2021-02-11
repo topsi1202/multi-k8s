@@ -11,6 +11,6 @@ docker push maorizio1202/multi-server:$SHA
 docker push maorizio1202/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployment/server-deployment server=maorizio1202/multi-server:$SHA
-kubectl set image deployment/client-deployment client=maorizio1202/multi-client:$SHA
-kubectl set image deployment/worker-deployment worker=maorizio1202/multi-worker:$SHA
+kubectl set image deployments/server-deployment server=maorizio1202/multi-server:$SHA
+kubectl set image deployments/client-deployment client=maorizio1202/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=maorizio1202/multi-worker:$SHA
